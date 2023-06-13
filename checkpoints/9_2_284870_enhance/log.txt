@@ -1,0 +1,126 @@
+Arguments:
+  data_root: /dssg/home/acct-stu/stu177/DS-project/data
+  save_root: /dssg/home/acct-stu/stu177/DS-project/checkpoints
+  init_author_path: author_init.bin
+  batch_size: 16384
+  epochs: 100
+  train_frac: 0.9
+  dims: [256, 128, 64, 32]
+  enhance: True
+  from_dir: 9_241356
+  enhance_frac: 2.0
+#authors: 6611, #papers: 79937
+#(author, paper) edge in train set: 614179, in test set: 136484
+#(paper, paper) edge in train set: 294402, in test set: 65422
+#(author, author) edge in train set: 8697, in test set: 1932
+#authors in train set: 6610
+#papers in train set: 79660
+#Predicted author-author edges: 17394, min similarity is 0.9618
+#Predicted paper-paper edges: 579968, min similarity is 0.5000
+#Predicted author-paper edges: 24612, min similarity is 0.9406
+Graph(num_nodes={'author': 6611, 'paper': 79937},
+      num_edges={('author', 'aa_pred', 'author'): 17394, ('author', 'ap_pred', 'paper'): 24612, ('author', 'coauthor', 'author'): 24005, ('author', 'ref', 'paper'): 614179, ('paper', 'beref', 'author'): 614179, ('paper', 'cite', 'paper'): 668741, ('paper', 'pp_pred', 'paper'): 579968},
+      metagraph=[('author', 'author', 'aa_pred'), ('author', 'author', 'coauthor'), ('author', 'paper', 'ap_pred'), ('author', 'paper', 'ref'), ('paper', 'author', 'beref'), ('paper', 'paper', 'cite'), ('paper', 'paper', 'pp_pred')])
+Epoch 0: loss = 0.3092
+Epoch 1: loss = 0.1286
+Epoch 2: loss = 0.1043
+Epoch 3: loss = 0.0902
+Epoch 4: loss = 0.0817
+Epoch 5: loss = 0.0752
+Epoch 6: loss = 0.0703
+Epoch 7: loss = 0.0664
+Epoch 8: loss = 0.0628
+Epoch 9: loss = 0.0601
+Epoch 10: loss = 0.0579
+Epoch 11: loss = 0.0560
+Epoch 12: loss = 0.0547
+Epoch 13: loss = 0.0529
+Epoch 14: loss = 0.0513
+Epoch 15: loss = 0.0500
+Epoch 16: loss = 0.0491
+Epoch 17: loss = 0.0478
+Epoch 18: loss = 0.0470
+Epoch 19: loss = 0.0459
+Epoch 20: loss = 0.0451
+Epoch 21: loss = 0.0444
+Epoch 22: loss = 0.0438
+Epoch 23: loss = 0.0434
+Epoch 24: loss = 0.0424
+Epoch 25: loss = 0.0415
+Epoch 26: loss = 0.0409
+Epoch 27: loss = 0.0405
+Epoch 28: loss = 0.0405
+Epoch 29: loss = 0.0397
+Epoch 30: loss = 0.0393
+Epoch 31: loss = 0.0386
+Epoch 32: loss = 0.0384
+Epoch 33: loss = 0.0379
+Epoch 34: loss = 0.0375
+Epoch 35: loss = 0.0375
+Epoch 36: loss = 0.0369
+Epoch 37: loss = 0.0364
+Epoch 38: loss = 0.0363
+Epoch 39: loss = 0.0359
+Epoch 40: loss = 0.0358
+Epoch 41: loss = 0.0356
+Epoch 42: loss = 0.0352
+Epoch 43: loss = 0.0348
+Epoch 44: loss = 0.0347
+Epoch 45: loss = 0.0346
+Epoch 46: loss = 0.0343
+Epoch 47: loss = 0.0338
+Epoch 48: loss = 0.0337
+Epoch 49: loss = 0.0332
+Epoch 50: loss = 0.0334
+Epoch 51: loss = 0.0332
+Epoch 52: loss = 0.0329
+Epoch 53: loss = 0.0326
+Epoch 54: loss = 0.0324
+Epoch 55: loss = 0.0322
+Epoch 56: loss = 0.0322
+Epoch 57: loss = 0.0319
+Epoch 58: loss = 0.0317
+Epoch 59: loss = 0.0316
+Epoch 60: loss = 0.0313
+Epoch 61: loss = 0.0312
+Epoch 62: loss = 0.0310
+Epoch 63: loss = 0.0312
+Epoch 64: loss = 0.0308
+Epoch 65: loss = 0.0304
+Epoch 66: loss = 0.0305
+Epoch 67: loss = 0.0304
+Epoch 68: loss = 0.0303
+Epoch 69: loss = 0.0301
+Epoch 70: loss = 0.0299
+Epoch 71: loss = 0.0296
+Epoch 72: loss = 0.0296
+Epoch 73: loss = 0.0295
+Epoch 74: loss = 0.0296
+Epoch 75: loss = 0.0295
+Epoch 76: loss = 0.0294
+Epoch 77: loss = 0.0292
+Epoch 78: loss = 0.0290
+Epoch 79: loss = 0.0290
+Epoch 80: loss = 0.0289
+Epoch 81: loss = 0.0287
+Epoch 82: loss = 0.0287
+Epoch 83: loss = 0.0283
+Epoch 84: loss = 0.0283
+Epoch 85: loss = 0.0283
+Epoch 86: loss = 0.0281
+Epoch 87: loss = 0.0284
+Epoch 88: loss = 0.0283
+Epoch 89: loss = 0.0279
+Epoch 90: loss = 0.0279
+Epoch 91: loss = 0.0278
+Epoch 92: loss = 0.0278
+Epoch 93: loss = 0.0277
+Epoch 94: loss = 0.0275
+Epoch 95: loss = 0.0274
+Epoch 96: loss = 0.0274
+Epoch 97: loss = 0.0273
+Epoch 98: loss = 0.0273
+Epoch 99: loss = 0.0274
+Max f1 score of predicting reference edges: 0.9404 (precision = 0.9464, recall = 0.9345), threshold = -0.1229
+Max f1 score of predicting citation edges: 0.8462 (precision = 0.8398, recall = 0.8526)
+Max f1 score of predicting coauthor edges: 0.9819 (precision = 0.9834, recall = 0.9803)
